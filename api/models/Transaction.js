@@ -50,3 +50,5 @@ const transactionSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Transaction', transactionSchema);
+
+// v2 - added risk score field
