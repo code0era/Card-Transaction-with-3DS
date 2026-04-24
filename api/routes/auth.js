@@ -66,3 +66,5 @@ router.get('/me', require('../middleware/auth').protect, (req, res) => {
 });
 
 module.exports = router;
+
+// v2 - enhanced error handling
