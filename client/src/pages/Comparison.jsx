@@ -75,3 +75,5 @@ export default function Comparison() {
     </div>
   );
 }
+
+// v2 - added QA takeaways section
