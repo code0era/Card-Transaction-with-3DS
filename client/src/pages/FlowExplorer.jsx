@@ -156,3 +156,5 @@ export default function FlowExplorer() {
     </div>
   );
 }
+
+// v2 - improved timeline UX
