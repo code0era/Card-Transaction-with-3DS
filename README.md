@@ -1,6 +1,6 @@
 # 🛡️ 3DS Card Transaction Visualizer
 
-> **DatMan QA Trainee Assignment — Task 1**  
+> **DatMan QA Trainee Assignment — Task 1**
 > An enterprise-grade, interactive visualization of the end-to-end lifecycle of a 3D Secure card payment.
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](https://card-transaction-3ds.vercel.app)
@@ -8,6 +8,25 @@
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
 ![JWT](https://img.shields.io/badge/Auth-JWT-orange)
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Landing Page
+![Home Page](screenshots/home.png)
+
+### 🔍 Flow Explorer — Interactive 9-Step 3DS Timeline
+![Flow Explorer](screenshots/flow-explorer.png)
+
+### ⚡ Live Simulation — Frictionless & Challenge Flows
+![Simulation](screenshots/simulation.png)
+
+### ⚖️ 3DS v1 vs v2 Comparison Matrix
+![Comparison](screenshots/comparison.png)
+
+### 📊 Transaction History Dashboard
+![History](screenshots/history.png)
 
 ---
 
@@ -24,14 +43,14 @@
 
 ## ✨ Features
 
-| Page | Description |
-|------|-------------|
-| 🏠 **Landing** | Hero with animated mini 3DS flow preview |
-| 🔍 **Flow Explorer** | Interactive 9-step 3DS timeline with API payloads |
-| ⚡ **Simulation** | Live mock 3DS transaction runner (frictionless/challenge) |
-| ⚖️ **Comparison** | 3DS v1 vs 3DS v2 side-by-side feature matrix |
-| 📊 **History** | Paginated transaction history with stats & filters |
-| 📄 **Documentation** | Complete 1-page 3DS explanation (Task 1 deliverable) |
+| Page | Route | Auth | Description |
+|------|-------|------|-------------|
+| 🏠 **Landing** | `/` | ❌ | Hero with animated mini 3DS flow preview |
+| 🔍 **Flow Explorer** | `/flow` | ✅ | Interactive 9-step 3DS timeline with API payloads |
+| ⚡ **Simulation** | `/simulation` | ✅ | Live mock 3DS transaction runner (frictionless/challenge) |
+| ⚖️ **Comparison** | `/comparison` | ✅ | 3DS v1 vs 3DS v2 side-by-side feature matrix |
+| 📊 **History** | `/history` | ✅ | Paginated transaction history with stats & filters |
+| 📄 **Documentation** | `/docs` | ❌ | Complete 1-page 3DS explanation (Task 1 deliverable) |
 
 ---
 
@@ -51,6 +70,7 @@ root/
 │       ├── data/3ds-flow-data.js ← All 9 flow stages + payloads
 │       ├── pages/                ← 8 pages
 │       └── utils/api.js          ← Axios + JWT interceptor
+├── screenshots/                  ← App screenshots
 ├── vercel.json                   ← Routes /api/* → serverless
 └── package.json                  ← Root build script
 ```
