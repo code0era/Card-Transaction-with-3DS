@@ -1,0 +1,27 @@
+.docs-page { min-height: 100vh; }
+.docs-header { margin-bottom: 48px; border-bottom: 1px solid var(--border); padding-bottom: 32px; }
+.docs-header h1 { margin: 12px 0; }
+.docs-meta { color: var(--text-muted); font-size: 0.85rem; margin-top: 8px; }
+
+.docs-content { max-width: 900px; }
+.doc-section { margin-bottom: 48px; }
+.doc-section h2 { font-size: 1.4rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.doc-section p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; font-size: 0.95rem; }
+
+.actors-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.actor-card { padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.actor-card__role { font-size: 0.85rem; font-weight: 700; color: var(--blue-light); }
+.actor-card__desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+
+.flow-steps-doc { display: flex; flex-direction: column; gap: 0; }
+.flow-step-doc { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.flow-step-doc:last-child { border-bottom: none; }
+.flow-step-doc__num { font-size: 2rem; font-weight: 900; line-height: 1; flex-shrink: 0; width: 36px; }
+.flow-step-doc__body h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.flow-step-doc__body p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin: 0; }
+
+.doc-bullets { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.doc-bullets li { display: flex; gap: 10px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; padding-left: 16px; position: relative; }
+.doc-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--blue); }
+
+@media (max-width: 600px) { .actors-grid { grid-template-columns: 1fr; } }

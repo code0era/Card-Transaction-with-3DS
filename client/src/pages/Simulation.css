@@ -1,0 +1,51 @@
+.sim-page { min-height: 100vh; }
+.sim-header { text-align: center; margin-bottom: 40px; }
+.sim-header p { color: var(--text-secondary); margin-top: 8px; }
+.sim-layout { display: grid; grid-template-columns: 320px 1fr; gap: 24px; align-items: start; }
+
+.sim-config { padding: 28px; }
+.sim-config h3 { font-size: 1.1rem; margin-bottom: 16px; }
+
+.auth-method-option {
+  display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  cursor: pointer; margin-bottom: 8px; transition: all var(--transition-fast);
+  color: var(--text-secondary); font-size: 0.9rem; font-weight: 500;
+}
+.auth-method-option input { accent-color: var(--blue); }
+.auth-method-option--active { background: rgba(59,130,246,0.06); }
+
+.sim-progress { padding: 24px; margin-bottom: 20px; }
+.sim-progress h3 { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
+
+.step-list { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+.step-row {
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px;
+  border-radius: var(--radius-sm); transition: all var(--transition-fast);
+  color: var(--text-muted); position: relative;
+}
+.step-row--active { background: rgba(59,130,246,0.08); color: var(--blue-light); }
+.step-row--done { color: var(--green); }
+
+.step-row__indicator { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.step-check { font-size: 0.85rem; color: var(--green); }
+.step-num { font-size: 0.75rem; font-weight: 600; }
+
+.step-row__label { font-size: 0.875rem; font-weight: 500; }
+.step-row__pulse {
+  position: absolute; right: 12px; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--blue); animation: pulse-dot 1s infinite;
+}
+
+.sim-result { padding: 24px; }
+.sim-result__header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.sim-result__check { font-size: 2rem; }
+.sim-result__header h3 { margin-bottom: 4px; }
+.sim-result__header p { color: var(--text-secondary); font-size: 0.875rem; }
+
+.sim-result__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.result-item { display: flex; flex-direction: column; gap: 4px; }
+.result-item span:first-child { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.result-item code { font-family: var(--font-mono); font-size: 0.8rem; color: var(--blue-light); }
+
+@media (max-width: 900px) { .sim-layout { grid-template-columns: 1fr; } }
