@@ -215,3 +215,5 @@ export const COMPARISON_3DS = {
     },
   },
 };
+
+// v2 - added failure events data
