@@ -50,3 +50,5 @@ export default function App() {
     </AuthProvider>
   );
 }
+
+// v2 - enhanced routing
