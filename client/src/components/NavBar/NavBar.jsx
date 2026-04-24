@@ -110,3 +110,5 @@ export default function NavBar() {
     </nav>
   );
 }
+
+// v2 - improved mobile menu
