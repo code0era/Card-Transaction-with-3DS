@@ -137,3 +137,5 @@ export default function History() {
     </div>
   );
 }
+
+// v2 - added pagination
