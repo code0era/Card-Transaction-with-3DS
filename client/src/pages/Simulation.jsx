@@ -154,3 +154,5 @@ export default function Simulation() {
     </div>
   );
 }
+
+// v2 - improved animation timing
