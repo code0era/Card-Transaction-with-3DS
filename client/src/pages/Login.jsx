@@ -77,3 +77,5 @@ export default function Login() {
     </div>
   );
 }
+
+// v2 - added demo credentials hint
