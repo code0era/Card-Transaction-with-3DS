@@ -95,3 +95,5 @@ export default function Documentation() {
     </div>
   );
 }
+
+// v2 - enhanced flow steps detail
