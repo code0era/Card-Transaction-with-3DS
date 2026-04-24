@@ -3,7 +3,7 @@
 > **DatMan QA Trainee Assignment — Task 1**
 > An enterprise-grade, interactive visualization of the end-to-end lifecycle of a 3D Secure card payment.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](https://card-transaction-3ds.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?logo=vercel)](https://card-transaction-with-3-ds.vercel.app/)
 ![Node.js](https://img.shields.io/badge/Node.js-20.x-green?logo=node.js)
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green?logo=mongodb)
@@ -177,7 +177,7 @@ Merchant → PSP (Tokenization) → Acquiring Bank → Card Network
 | Layer | Technology |
 |-------|-----------|
 | Frontend | React 18, Vite 4, React Router v6 |
-| Styling | Vanilla CSS (custom design system) |
+| Styling | Vanilla CSS (professional light theme) |
 | Backend | Node.js, Express.js |
 | Database | MongoDB + Mongoose |
 | Auth | JWT + bcryptjs |
