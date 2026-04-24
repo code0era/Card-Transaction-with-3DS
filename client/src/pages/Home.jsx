@@ -163,3 +163,5 @@ export default function Home() {
     </div>
   );
 }
+
+// v2 - enhanced hero section
