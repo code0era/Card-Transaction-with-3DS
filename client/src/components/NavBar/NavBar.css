@@ -1,183 +1,91 @@
-/* ─── NavBar ──────────────────────────────────────────────── */
+/* ─── NavBar — Light Professional Theme ── */
 .navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   height: var(--nav-height);
-  background: transparent;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
   transition: all var(--transition);
 }
-
 .navbar--scrolled {
-  background: rgba(7, 11, 20, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.98);
+  box-shadow: var(--shadow-sm);
 }
-
-.navbar__inner {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  gap: 32px;
-}
+.navbar__inner { display: flex; align-items: center; height: 100%; gap: 32px; }
 
 /* Logo */
-.navbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.navbar__logo-icon {
-  font-size: 1.5rem;
-  color: var(--blue);
-  filter: drop-shadow(0 0 8px var(--blue));
-}
-.navbar__logo-text {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.01em;
-}
+.navbar__logo { display: flex; align-items: center; gap: 8px; text-decoration: none; flex-shrink: 0; }
+.navbar__logo-icon { font-size: 1.4rem; color: var(--blue); filter: none; }
+.navbar__logo-text { font-size: 1rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.01em; }
 
 /* Desktop Links */
-.navbar__links {
-  display: flex;
-  list-style: none;
-  gap: 4px;
-  flex: 1;
-  justify-content: center;
-}
-
+.navbar__links { display: flex; list-style: none; gap: 2px; flex: 1; justify-content: center; }
 .navbar__link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 12px;
-  border-radius: var(--radius-sm);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: var(--radius-sm);
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--text-secondary); text-decoration: none;
+  transition: all var(--transition-fast); white-space: nowrap;
 }
-
-.navbar__link:hover {
-  color: var(--text-primary);
-  background: var(--bg-card);
-}
-
+.navbar__link:hover { color: var(--text-primary); background: var(--bg-tertiary); }
 .navbar__link--active {
-  color: var(--blue-light) !important;
-  background: rgba(59,130,246,0.1) !important;
+  color: var(--blue) !important;
+  background: var(--blue-bg) !important;
+  font-weight: 600;
 }
-
 .navbar__link-icon { font-size: 0.9rem; }
 
 /* User Area */
 .navbar__actions { flex-shrink: 0; }
-
-.navbar__user {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
+.navbar__user { display: flex; align-items: center; gap: 10px; }
 .navbar__avatar {
-  width: 32px; height: 32px;
-  border-radius: 50%;
+  width: 30px; height: 30px; border-radius: 50%;
   background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 700; color: white;
 }
-
-.navbar__username {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.navbar__auth-btns {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+.navbar__username { font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); }
+.navbar__auth-btns { display: flex; align-items: center; gap: 8px; }
 
 /* Hamburger */
 .navbar__hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 8px;
-  margin-left: auto;
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; background: transparent; border: none;
+  padding: 8px; margin-left: auto;
 }
-
 .navbar__hamburger span {
-  display: block;
-  width: 22px; height: 2px;
-  background: var(--text-primary);
-  border-radius: 2px;
-  transition: all var(--transition);
-  transform-origin: center;
+  display: block; width: 22px; height: 2px;
+  background: var(--text-primary); border-radius: 2px;
+  transition: all var(--transition); transform-origin: center;
 }
-
 .navbar__hamburger--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .navbar__hamburger--open span:nth-child(2) { opacity: 0; }
 .navbar__hamburger--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Mobile Menu */
 .navbar__mobile-menu {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  padding: 16px;
-  background: rgba(7, 11, 20, 0.97);
-  backdrop-filter: blur(20px);
+  display: none; flex-direction: column; gap: 4px;
+  padding: 12px 16px;
+  background: white;
   border-bottom: 1px solid var(--border);
-  max-height: 0;
-  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  max-height: 0; overflow: hidden;
   transition: max-height var(--transition-slow);
 }
-
-.navbar__mobile-menu--open {
-  max-height: 600px;
-}
-
+.navbar__mobile-menu--open { max-height: 600px; }
 .navbar__mobile-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  border-radius: var(--radius-md);
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  text-decoration: none;
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: var(--radius-md);
+  font-size: 0.9rem; font-weight: 500;
+  color: var(--text-secondary); text-decoration: none;
   transition: all var(--transition-fast);
 }
-
-.navbar__mobile-link:hover,
-.navbar__mobile-link--active {
-  color: var(--blue-light);
-  background: rgba(59,130,246,0.1);
+.navbar__mobile-link:hover, .navbar__mobile-link--active {
+  color: var(--blue); background: var(--blue-bg);
 }
-
 .navbar__mobile-auth {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
+  display: flex; gap: 10px; margin-top: 12px;
+  padding-top: 12px; border-top: 1px solid var(--border);
 }
 
 @media (max-width: 900px) {
