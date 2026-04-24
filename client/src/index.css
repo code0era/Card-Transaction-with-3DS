@@ -361,3 +361,5 @@ code, pre { font-family: var(--font-mono); }
 .alert-error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: var(--red-light); }
 .alert-success { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.25); color: var(--green-light); }
 .alert-info { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); color: var(--blue-light); }
+
+/* v2 - enhanced glassmorphism */
